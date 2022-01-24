@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Diplomarbeit.mainPages.Formular"
+             Title="Fragen und Antworten">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <BoxView HeightRequest="10"/>
+            <Label 
+                x:Name="ueberschrift"
+                Text="Überschrift" 
+                FontSize="Subtitle"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <BoxView HeightRequest="10"/>
+            
+            <!--Auswahl-->
+            <StackLayout Orientation="Horizontal">
+                <BoxView WidthRequest="10" HeightRequest="0"/>
+                <Label
+                    x:Name="frage"
+                Text="Frage"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <BoxView WidthRequest="10"/>
+
+                <Frame
+                    BackgroundColor="LightGray"
+                    BorderColor="Black"
+                    HeightRequest="15"
+                    CornerRadius="30">
+                    <Slider
+                    x:Name="auswahl"
+                    Maximum="10"
+                    Minimum="1"
+                    ValueChanged="auswahl_ValueChanged"
+                    HorizontalOptions="StartAndExpand"
+                    WidthRequest="200"
+                    Value="5"
+                    ThumbColor="Blue"
+                    HeightRequest="40"
+                    
+                    />
+                </Frame>
+                <BoxView/>
+                <Label
+                    x:Name="zaehler"
+                    Text="5"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        
+                        HorizontalTextAlignment="center"/>
+                <BoxView WidthRequest="10"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="EndAndExpand">
+                <Button
+                    x:Name="zurueck"
+                Text="Zurück"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150"
+                Clicked="zurueck_Clicked"/>
+                <Button
+                    x:Name="weiter"
+                Text="Nächste Frage"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150"
+                Clicked="naechsteFrage_Clicked"/>
+                
+                
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

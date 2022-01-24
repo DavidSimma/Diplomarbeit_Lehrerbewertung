@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Diplomarbeit.mainPages.TeacherKey"
+             Title="Schlüssel für Lehrpersonen">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="10"/>
+            <Label 
+                x:Name="ueberschrift"
+                Text="Überschrift" 
+                FontSize="Subtitle"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <BoxView HeightRequest="10"/>
+
+            <Entry
+                x:Name="teacherKey"
+                Placeholder="Schlüssel für Lehrperson"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                WidthRequest="300"
+                TextChanged="teacherKey_TextChanged"
+                />
+            <Label
+                x:Name="wrongKey"
+                IsVisible="false"
+                Text="Falscher Schlüssel! Bitte versuchen Sie es erneut"
+                TextColor="Red"
+                FontSize="Micro"
+                HorizontalTextAlignment="Center"/>
+
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="EndAndExpand">
+                <Button
+                    x:Name="zurueck"
+                Text="Zurück"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150"
+                Clicked="zurueck_Clicked"/>
+                <Button
+                    x:Name="absenden"
+                Text="Absenden"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150"
+                Clicked="absenden_Clicked"/>
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

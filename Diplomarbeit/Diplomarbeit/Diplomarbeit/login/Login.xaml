@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Diplomarbeit.login.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                Text="Login"
+                FontSize="Title"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                BackgroundColor="Orange"/>
+            <BoxView
+                HeightRequest="250"/>
+            <Entry
+                x:Name="key"
+                Placeholder="Schlüssel eingeben"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+            <Label
+                x:Name="wrongKey"
+                IsVisible="false"
+                Text="Falscher Schlüssel! Bitte versuchen Sie es erneut"
+                TextColor="Red"
+                FontSize="Micro"
+                HorizontalTextAlignment="Center"/>
+
+            <Button
+                x:Name="submit"
+                Text="Bestätigen"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                Clicked="submit_Clicked"
+                />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

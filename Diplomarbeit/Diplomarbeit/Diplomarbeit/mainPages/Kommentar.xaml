@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Diplomarbeit.mainPages.Kommentar"
+             Title="Kommentar">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="10"/>
+            <Label 
+                x:Name="ueberschrift"
+                Text="Überschrift" 
+                FontSize="Subtitle"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <BoxView HeightRequest="10"/>
+            
+            <Editor
+                x:Name="anmerkung"
+                Placeholder="Sonstige Anmerkung"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                WidthRequest="300"
+                AutoSize="TextChanges"
+                TextChanged="anmerkung_TextChanged"
+                />
+
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="EndAndExpand">
+                <Button
+                    x:Name="zurueck"
+                Text="Zurück"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150"
+                Clicked="zurueck_Clicked"/>
+                <Button
+                    x:Name="weiter"
+                Text="Weiter"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="150"
+                Clicked="weiter_Clicked"/>
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
