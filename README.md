@@ -26,7 +26,7 @@ Als erstes muss der Debugging-Modus auf dem gewünschten Android Gerät aktivier
 Im weiteren Schritt öffnet man erneut `Einstellungen -> System & Aktualisierungen -> Entwickleroptionen` und aktiviert die Option `USB-Debugging`.  
 
 Im Anschluss kann die App mittels des externen Gerätes gestartet werden. Es wird das Startprojekt `Diplomarbeit.Android` sowie das externe Handy gewählt:
-
+![Debugging-Handy](https://user-images.githubusercontent.com/56593280/151257740-bc127d0a-6db5-4d66-a5ca-2c30c3d98dad.jpg)
 
 ## Step by Step go thru:
 
