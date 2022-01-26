@@ -7,7 +7,16 @@ Die App lässt sich über die eben genannte Website downloaden (derzeit nur für
 
 ## Was wird dafür benötigt?
 
+Das Programm lässt sich in der Entwicklungsumgebung `Visual Studio` ausführen.  
+
+Für die einwandfreie Ausführung des Programms werden folgende NuGet-Packete benötigt:
+ - Newtonsoft.Json
+ - Xamarin.Essentials
+ - Xamarin.Forms
+
 ## Wie führt man die App aus?
+
+
 
 ## Step by Step go thru:
 
