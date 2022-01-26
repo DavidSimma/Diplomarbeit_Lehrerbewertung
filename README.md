@@ -34,7 +34,9 @@ Im Anschluss kann die App mittels des externen Gerätes gestartet werden. Es wir
 
 Für das Debuggen mittels eines Android Emulators muss als erster Schritt ein virtuelles Android Gerät erstellt werden. Man wählt zuerst bei der Debuggeigenschaft das Feld `Android-Geräte-Manager`. In dem neu geöffnetem Fenster wählt man nun *Neu* und erstellt ein virtuelles Gerät seiner Wahl. Im Anschluss wählt man das Feld *Erstellen* und der `Android-Geräte-Manager` sieht dann wie folgt aus:  
 
+![Debugging-Emulator](https://user-images.githubusercontent.com/56593280/151258821-625cfc40-c5f8-47cd-a578-a9df8c2a6dee.jpg)
 
+Nun kann man das Fenster wieder schließen und erhält bei der Debugeigenschaft ein neues Feld mit dem eben erstellten virtuellen Handys. Dies wählt man nun aus und kann die App mit dem virtuellen Handy starten.
 
 ## Step by Step go thru:
 
