@@ -40,3 +40,21 @@ Nun kann man das Fenster wieder schließen und erhält bei der Debugeigenschaft 
 
 ## Step by Step go thru:
 
+Beim Start der App wird ein Schlüssel verlangt. Dieser Schlüssel wird den Schüler\*innen von der Lehrperson mitgeteilt. Der Schlüssel wird eingegeben und bestätigt:  
+
+
+
+In den folgenden 8 Seiten werden die von der Lehrperson formulierten Fragen angezeigt. Diese sind mittels eines Reglers von 1 - 10 zu beantworten:  
+
+
+
+Auf der Seite *Kommentar* kann noch eine weitere Anmerkung angegeben werden:  
+
+
+
+Auf der Seite *Schlüssel für Lehrpersonen* muss nun ein weiterer Schlüssel angegeben werden, welcher den Lehrpersonen Hilft, die Verschiedenen Klassen zu unterschieden. Den Schlüssel kann die Lehrperson wieder selbst auswählen und den Schülern mitteilen:  
+
+
+
+Die folgende und letzte Seite gibt den Status der Sendung des Formulars aus. Falls die Daten erfolgreich abgesendet werden konnten, erscheint dementsprechende Nachricht. Falls dies nicht der Fall ist wird eine Fehlermeldung zurückgegeben. Der Knopf *Abschließen* führt wieder zurück zur Startseite:  
+
