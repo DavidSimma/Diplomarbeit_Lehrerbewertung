@@ -6,6 +6,6 @@ Es handelt sich hierbei um eine Plattform, welche die Absicht hat, den Unterrich
 Die Plattform besteht aus 3 Teilbereichen:
  - [Website für Lehrpersonen - Hauser](https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Website)
  - [Backend - Sailer](https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Backend)
- - [Mobile App für Schüler\*innen - Simma](https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Website)
+ - [Mobile App für Schüler\*innen - Simma](https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Mobile-App)
 
 Die Beschreibung der einzelnen Teilbereiche erfolgt in den einzelnen Branches mittels einer eigenen `ReadMe Datei`.
