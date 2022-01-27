@@ -1,0 +1,7 @@
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.csprojAssemblyReference.cache
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.AssemblyInfoInputs.cache
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.AssemblyInfo.cs
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.csproj.CoreCompileInputs.cache
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.MvcApplicationPartsAssemblyInfo.cache
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.RazorAssemblyInfo.cache
+D:\SimonHTL\Diplomarbeit\Website\Diplomarbeit\Diplomarbeit\obj\Release\netcoreapp3.1\Diplomarbeit.RazorAssemblyInfo.cs

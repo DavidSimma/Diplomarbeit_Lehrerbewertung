@@ -1,0 +1,128 @@
+﻿
+$(document).ready(() => {
+    $("#formularbtn").click(() => {
+        $.ajax({
+            url: "/formular/getAllStandardFormular",
+            method: "GET",
+            success: (dataFromServer1) => {
+                if (dataFromServer1 == "NoFormular") {
+                    $("#formular").text("Keine Formulare vorhanden!");
+                }
+                else if (dataFromServer1 == "DbError") {
+                    $("#formular").text("Es gibt zur Zeit Probleme mit dem Server!");
+                }
+                else {
+                    $("#formular").html(createFormular(dataFromServer1));
+                }
+            },
+            error: () => {
+                $("#formular").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+            }
+        });
+    });
+    
+
+    $("#weiter").click(() => {
+        $("#formular").html(createFormular2());
+    });
+
+    $("#zurueck").click(() => {
+        $("#formular").html(createFormular3());
+    });
+});
+
+let f;
+let i;
+
+function createFormular(formular) {
+    f = formular;
+    i = 1;
+    let s = `<p><b>Schlüssel</b></p>
+            <p>${formular[i - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${formular[i - 1].ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${formular[i - 1].frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${formular[i - 1].frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${formular[i - 1].frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${formular[i - 1].frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${formular[i - 1].frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${formular[i - 1].frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${formular[i - 1].frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${formular[i - 1].frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${formular[i - 1].anmerkung}</p>`;
+    return s;
+}
+
+function createFormular2() {
+    i = i + 1;
+    if (i <= 5) {
+        let s = `<p><b>Schlüssel</b></p>
+            <p>${f[i - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${f[i - 1].ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${f[i - 1].frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${f[i - 1].frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${f[i - 1].frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${f[i - 1].frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${f[i - 1].frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${f[i - 1].frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${f[i - 1].frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${f[i - 1].frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${f[i - 1].anmerkung}</p>`;
+        return s;
+    } else {
+        let d = `<p>alle verfügbaren Standardformulare</p><br />
+        <p>Individuelle Formulare müssen mit ID gesucht werden!</p>`;
+        return d;
+    }
+}
+
+function createFormular3() {
+    i = i - 1;
+    if (i >= 1) {
+        let s = `<p><b>Schlüssel</b></p>
+            <p>${f[i - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${f[i - 1].ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${f[i - 1].frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${f[i - 1].frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${f[i - 1].frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${f[i - 1].frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${f[i - 1].frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${f[i - 1].frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${f[i - 1].frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${f[i - 1].frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${f[i - 1].anmerkung}</p>`;
+        return s;
+    } else {
+        let d = `<p>Hier werden die Formulare angezeigt</p>`;
+        return d;
+    }
+}

@@ -1,0 +1,401 @@
+﻿
+$(document).ready(() => {
+    $("#formularbtn").click(() => {
+        $.ajax({
+            url: "/formular/getAllStandardFormular",
+            method: "GET",
+            success: (dataFromServer1) => {
+                if (dataFromServer1 == "NoFormular") {
+                    $("#formular").text("Keine Formulare vorhanden!");
+                }
+                else if (dataFromServer1 == "DbError") {
+                    $("#formular").text("Es gibt zur Zeit Probleme mit dem Server!");
+                }
+                else {
+                    $("#formular").html(createFormular(dataFromServer1));
+                }
+            },
+            error: () => {
+                $("#formular").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+            }
+        });
+    });
+    
+
+    $("#weiter").click(() => {
+        $("#formular").html(createFormular2());
+    });
+
+    $("#zurueck").click(() => {
+        $("#formular").html(createFormular3());
+    });
+
+    $.ajax({
+        url: "/formular/getAllStandardFormular",
+        method: "GET",
+        success: (dataFromServer2) => {
+
+            if (dataFromServer2 == "NoFormular") {
+                $("#waehlen").text("Keine Formulare vorhanden!");
+            }
+            else if (dataFromServer2 == "DbError") {
+                $("#waehlen").text("Es gibt zur Zeit Probleme mit dem Server!");
+            }
+            else {
+                $("#waehlen").html(createSelectFormulare(dataFromServer2));
+            }
+        },
+        error: () => {
+            $("#waehlen").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+        }
+    });
+
+    $("#formularbtn2").click(() => {
+        let s = $("#waehlen").val();
+        $.ajax({
+            url: "/formular/getFormularById?id=" + s,
+            method: "GET",
+            success: (dataFromServer3) => {
+
+                if (dataFromServer3 == "NoFormular") {
+                    $("#formular2").text("Keine Formulare vorhanden!");
+                }
+                else if (dataFromServer3 == "DbError") {
+                    $("#formular2").text("Es gibt zur Zeit Probleme mit dem Server!");
+                }
+                else {
+                    $("#formular2").html(createFormularbyId(dataFromServer3));
+                }
+            },
+            error: () => {
+                $("#formular2").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+            }
+        });
+    });
+
+    $.ajax({
+        url: "/formular/getErgebnisDistinct",
+        method: "GET",
+        success: (dataFromServer4) => {
+
+            if (dataFromServer4 == "NoFormular") {
+                $("#wahlFormular").text("Keine Formulare vorhanden!");
+            }
+            else if (dataFromServer4 == "DbError") {
+                $("#wahlFormular").text("Es gibt zur Zeit Probleme mit dem Server!");
+            }
+            else {
+                $("#wahlFormular").html(createSelectErgebnis(dataFromServer4));
+            }
+        },
+        error: () => {
+            $("#wahlFormular").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+        }
+    });
+
+    $("#anzeigen").click(() => {
+        let s = $("#wahlFormular").val();
+        $.ajax({
+            url: "/formular/getAllErgebnisseByKey?key=" + s,
+            method: "GET",
+            success: (dataFromServer5) => {
+
+                if (dataFromServer5 == "NoFormular") {
+                    $("#antwort").text("Keine Formulare vorhanden!");
+                }
+                else if (dataFromServer5 == "DbError") {
+                    $("#antwort").text("Es gibt zur Zeit Probleme mit dem Server!");
+                }
+                else {
+                    $("#antwort").html(createErgebnis(dataFromServer5));
+                }
+            },
+            error: () => {
+                $("#antwort").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+            }
+        });
+    });
+
+    $("#weiter2").click(() => {
+        $("#antwort").html(createErgebnis2());
+    });
+
+    $("#zurueck2").click(() => {
+        $("#antwort").html(createErgebnis3());
+    });
+
+    $("#auswertungbtn").click(() => {
+        let s = $("#wahlFormular_").val();
+        $.ajax({
+            url: "/formular/getAllErgebnisseByKey?key=" + s,
+            method: "GET",
+            success: (dataFromServer6) => {
+
+                if (dataFromServer6 == "NoFormular") {
+                    $("#auswertung").text("Keine Formulare vorhanden!");
+                }
+                else if (dataFromServer6 == "DbError") {
+                    $("#auswertung").text("Es gibt zur Zeit Probleme mit dem Server!");
+                }
+                else {
+                    $("#auswertung").html(createChart(dataFromServer6));
+                }
+            },
+            error: () => {
+                $("#auswertung").text("Es trat ein Fehler auf - die Daten konnten nicht geladen werden!");
+            }
+        });
+    });
+});
+
+function createChart(data) {
+    let s = `<select id=>`;
+    for (let i = 0; i < antwort.length; i++) {
+        s += `<option>${antwort[i].key}</option>`;
+    }
+    s += `</select>`;
+    return s;
+}
+
+let x;
+let y;
+let z;
+
+function createSelectErgebnis(antwort) {
+    let s = `<select id=>`;
+    for (let i = 0; i < antwort.length; i++) {
+        s += `<option>${antwort[i].key}</option>`;
+    }
+    s += `</select>`;
+    return s;
+}
+
+function createErgebnis(ergebnis) {
+    x = ergebnis;
+    y = 1;
+    z = ergebnis.length;
+    let s = `<p><b>LehrerID</b></p>
+            <p>${ergebnis[y - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${ergebnis[y - 1].ueberschrift}</p>
+            <p><b>${ergebnis[y - 1].frage1}</b></p>
+            <p>${ergebnis[y - 1].antwort1}</p>
+            <p><b>${ergebnis[y - 1].frage2}</b></p>
+            <p>${ergebnis[y - 1].antwort2}</p>
+            <p><b>${ergebnis[y - 1].frage3}</b></p>
+            <p>${ergebnis[y - 1].antwort3}</p>
+            <p><b>${ergebnis[y - 1].frage4}</b></p>
+            <p>${ergebnis[y - 1].antwort4}</p>
+            <p><b>${ergebnis[y - 1].frage5}</b></p>
+            <p>${ergebnis[y - 1].antwort5}</p>
+            <p><b>${ergebnis[y - 1].frage6}</b></p>
+            <p>${ergebnis[y - 1].antwort6}</p>
+            <p><b>${ergebnis[y - 1].frage7}</b></p>
+            <p>${ergebnis[y - 1].antwort7}</p>
+            <p><b>${ergebnis[y - 1].frage8}</b></p>
+            <p>${ergebnis[y - 1].antwort8}</p>
+            <p><b>${ergebnis[y - 1].anmerkung}</b></p>
+            <p>${ergebnis[y - 1].antwort9}</p>
+            <p><b>Schlüssel</b></p>
+            <p>${ergebnis[y - 1].key}</p>`;
+    return s;
+}
+
+function createErgebnis2() {
+    y = y + 1;
+    if (y <= z) {
+        let s = `<p><b>LehrerID</b></p>
+            <p>${x[y - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${x[y - 1].ueberschrift}</p>
+            <p><b>${x[y - 1].frage1}</b></p>
+            <p>${x[y - 1].antwort1}</p>
+            <p><b>${x[y - 1].frage2}</b></p>
+            <p>${x[y - 1].antwort2}</p>
+            <p><b>${x[y - 1].frage3}</b></p>
+            <p>${x[y - 1].antwort3}</p>
+            <p><b>${x[y - 1].frage4}</b></p>
+            <p>${x[y - 1].antwort4}</p>
+            <p><b>${x[y - 1].frage5}</b></p>
+            <p>${x[y - 1].antwort5}</p>
+            <p><b>${x[y - 1].frage6}</b></p>
+            <p>${x[y - 1].antwort6}</p>
+            <p><b>${x[y - 1].frage7}</b></p>
+            <p>${x[y - 1].antwort7}</p>
+            <p><b>${x[y - 1].frage8}</b></p>
+            <p>${x[y - 1].antwort8}</p>
+            <p><b>${x[y - 1].anmerkung}</b></p>
+            <p>${x[y - 1].antwort9}</p>
+            <p><b>Schlüssel</b></p>
+            <p>${x[y - 1].key}</p>`;
+        return s;
+    } else {
+        let d = `<p>alle verfügbaren Ergebnisformulare</p><br />`;
+        return d;
+    }
+}
+
+function createErgebnis3() {
+    y = y - 1;
+    if (y >= 1) {
+        let s = `<p><b>LehrerID</b></p>
+            <p>${x[y - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${x[y - 1].ueberschrift}</p>
+            <p><b>${x[y - 1].frage1}</b></p>
+            <p>${x[y - 1].antwort1}</p>
+            <p><b>${x[y - 1].frage2}</b></p>
+            <p>${x[y - 1].antwort2}</p>
+            <p><b>${x[y - 1].frage3}</b></p>
+            <p>${x[y - 1].antwort3}</p>
+            <p><b>${x[y - 1].frage4}</b></p>
+            <p>${x[y - 1].antwort4}</p>
+            <p><b>${x[y - 1].frage5}</b></p>
+            <p>${x[y - 1].antwort5}</p>
+            <p><b>${x[y - 1].frage6}</b></p>
+            <p>${x[y - 1].antwort6}</p>
+            <p><b>${x[y - 1].frage7}</b></p>
+            <p>${x[y - 1].antwort7}</p>
+            <p><b>${x[y - 1].frage8}</b></p>
+            <p>${x[y - 1].antwort8}</p>
+            <p><b>${x[y - 1].anmerkung}</b></p>
+            <p>${x[y - 1].antwort9}</p>
+            <p><b>Schlüssel</b></p>
+            <p>${x[y - 1].key}</p>`;
+        return s;
+    } else {
+        let d = `<p>Hier werden die Ergebnisformulare angezeigt</p>`;
+        return d;
+    }
+}
+
+let f;
+let i;
+
+function createSelectFormulare(formular) {
+    let s = `<select id=>`;
+    for (let i = 0; i < formular.length; i++) {
+        s += `<option>${formular[i].id}</option>`;
+    }
+    s += `</select>`;
+    return s;
+}
+
+function createFormularbyId(formularbyid) {
+    let s = `<p><b>LehrerID</b></p>
+            <p>${formularbyid.id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${formularbyid.ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${formularbyid.frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${formularbyid.frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${formularbyid.frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${formularbyid.frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${formularbyid.frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${formularbyid.frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${formularbyid.frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${formularbyid.frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${formularbyid.anmerkung}</p>`;
+    return s;
+}
+
+function createFormular(formular) {
+    f = formular;
+    i = 1;
+    let s = `<p><b>LehrerID</b></p>
+            <p>${formular[i - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${formular[i - 1].ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${formular[i - 1].frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${formular[i - 1].frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${formular[i - 1].frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${formular[i - 1].frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${formular[i - 1].frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${formular[i - 1].frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${formular[i - 1].frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${formular[i - 1].frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${formular[i - 1].anmerkung}</p>`;
+    return s;
+}
+
+function createFormular2() {
+    i = i + 1;
+    if (i <= 5) {
+        let s = `<p><b>LehrerID</b></p>
+            <p>${f[i - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${f[i - 1].ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${f[i - 1].frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${f[i - 1].frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${f[i - 1].frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${f[i - 1].frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${f[i - 1].frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${f[i - 1].frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${f[i - 1].frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${f[i - 1].frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${f[i - 1].anmerkung}</p>`;
+        return s;
+    } else {
+        let d = `<p>alle verfügbaren Standardformulare</p><br />
+        <p>Individuelle Formulare müssen mit ID gesucht werden!</p>`;
+        return d;
+    }
+}
+
+function createFormular3() {
+    i = i - 1;
+    if (i >= 1) {
+        let s = `<p><b>LehrerID</b></p>
+            <p>${f[i - 1].id}</p>
+            <p><b>Ueberschrift</b></p>
+            <p>${f[i - 1].ueberschrift}</p>
+            <p><b>Frage1</b></p>
+            <p>${f[i - 1].frage1}</p>
+            <p><b>Frage2</b></p>
+            <p>${f[i - 1].frage2}</p>
+            <p><b>Frage3</b></p>
+            <p>${f[i - 1].frage3}</p>
+            <p><b>Frage4</b></p>
+            <p>${f[i - 1].frage4}</p>
+            <p><b>Frage5</b></p>
+            <p>${f[i - 1].frage5}</p>
+            <p><b>Frage6</b></p>
+            <p>${f[i - 1].frage6}</p>
+            <p><b>Frage7</b></p>
+            <p>${f[i - 1].frage7}</p>
+            <p><b>Frage8</b></p>
+            <p>${f[i - 1].frage8}</p>
+            <p><b>Anmerkung</b></p>
+            <p>${f[i - 1].anmerkung}</p>`;
+        return s;
+    } else {
+        let d = `<p>Hier werden die Formulare angezeigt</p>`;
+        return d;
+    }
+}
