@@ -20,7 +20,7 @@ Für die einwandfreie Ausführung des Programms werden folgende NuGet-Packete be
 
 Beim Aufrufen der Website kommt man auf die Startseite. Hier steht nochmals ein Verwendungshinweiß sowio eine kurze Schritt-für-Schritt-Anweisung. Über die einzelen Taps der Navi-Bar kann man sich durch die einzelen Seiten der Website klicken. 
 
-![text](D:\SimonHTL\Diplomarbeit\Website\Startseite.PNG?raw=true "Bild")
+![Startseite](https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Website/Website/Startseite.PNG)
 <img src="D:\SimonHTL\Diplomarbeit\Website\Startseite.PNG" width="300">
 
 In den folgenden 8 Seiten werden die von der Lehrperson formulierten Fragen angezeigt. Diese sind mittels eines Reglers von 1 - 10 zu beantworten:  
