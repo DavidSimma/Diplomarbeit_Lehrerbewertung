@@ -1,7 +1,7 @@
 # Website für Lehrpersonen
 ***
 
-## Wofür ist diese Website
+# Wofür ist diese Website
 ***
 
 Diese Website ist ein Teil einer Plattform, welche die Absicht hat, Lehrpersonen die Verbesserung des eigenen Unterrichts mithilfe eines Feedback-Formulars zu erleichtern. Auf der Website stehen standardisierte Formulare zur Verfügung. Wenn die vorgefertigten Formularen unpassend sind, können zusätzlich neue, individuelle Formulare erstellen. Durch die Angabe des gewollten Formulars (FormularID) sowie eines einzigartigen Schlüssels kann ein neues Feedback erstellt werden. Die FormularID sowie Schlüssel müssen von der Lehrperson den Schüler:innen mitgeteilt werden, damit diese die notwendigen Angaben in der Mobilen-App ([separater Teil](https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Mobile-App) machen können. Die Mobile-App kann man auf dieser Website downloaden. Wenn die Ausfüllung der Formulare durch die Schüler:innen abgeschlossen ist, kann die Auswertung der Formulare auf der Website angesehen werden.
