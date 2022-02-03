@@ -21,4 +21,4 @@ Für die einwandfreie Ausführung des Programms werden folgende NuGet-Packete be
 Beim Aufrufen der Website kommt man auf die Startseite. Hier steht nochmals ein Verwendungshinweiß sowio eine kurze Schritt-für-Schritt-Anweisung. Über die einzelen Taps der Navi-Bar kann man sich durch die einzelen Seiten der Website klicken. 
 
 
-<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/tree/Website/Website/Startseite.PNG" width="300">
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/Startseite.PNG?raw=true" width="300">
