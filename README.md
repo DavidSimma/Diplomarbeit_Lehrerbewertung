@@ -18,7 +18,36 @@ Für die einwandfreie Ausführung des Programms werden folgende NuGet-Packete be
 
 ## Step by Step go thru:
 
-Beim Aufrufen der Website kommt man auf die Startseite. Hier steht nochmals ein Verwendungshinweiß sowio eine kurze Schritt-für-Schritt-Anweisung. Über die einzelen Taps der Navi-Bar kann man sich durch die einzelen Seiten der Website klicken. 
-
+Beim Aufrufen der Website kommt man auf die Startseite. Hier steht nochmals ein Verwendungshinweiß sowio eine kurze Schritt-für-Schritt-Anweisung. Über die einzelen Taps der Navbar kann man sich durch die einzelen Seiten der Website klicken. 
 
 <img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/Startseite.PNG?raw=true" width="800">
+
+Bei den Taps Impressum sowie Datenschutz wurden die rechtlichen Bedinungen formuliert und festgeschrieben
+
+Der Tap Formular besteht aus 3 Unterpunkten:
+ - Neues Formular erzeugen
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/NeuesFormular.PNG?raw=true" width="800">
+
+ - Standardformulare anzeigen
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/Standardformular.PNG?raw=true" width="800">
+
+ - Individuelle Formulare anzeigen
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/Individuellesformular.PNG?raw=true" width="800">
+
+Um eine neue Umfrage zu starten, muss ein neues Feedback erstellt werden
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/NeuesFeedback.PNG?raw=true" width="800">
+
+Der Tap Ergebnis besteht auch wiederum aus 2 Unterpunkten:
+ - Ergebnisformulare anzeigen
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/ergebnisformular.PNG?raw=true" width="800">
+
+ - Auswertung anzeigen
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Website/Website/Auswertung.PNG?raw=true" width="800">
+
+Beim letzten Taps, Download, kann man sich die APK der Mobilen-APP herunterladen.
