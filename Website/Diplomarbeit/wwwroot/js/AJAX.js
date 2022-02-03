@@ -160,35 +160,44 @@ var myChart
 
 function createChart(data) {
     var xValues = ["Frage1", "Frage2", "Frage3", "Frage4", "Frage5", "Frage6", "Frage7", "Frage8"];
-    var a1 = 0;
+    /*var a1 = 0;
     var a2 = 0;
     var a3 = 0;
     var a4 = 0;
     var a5 = 0;
     var a6 = 0;
     var a7 = 0;
-    var a8 = 0;
+    var a8 = 0;*/
+    var a = [0, 0, 0, 0, 0, 0, 0, 0]
     var l = data.length;
     for (let i = 0; i < l; i++) {
-        a1+=data[i].a1;
-        a2+=data[i].a2;
-        a3+=data[i].a3;
-        a4+=data[i].a4;
-        a5+=data[i].a5;
-        a6+=data[i].a6;
-        a7+=data[i].a7;
-        a8+=data[i].a8;
+        a[0]+=data[i].a1;
+        a[1]+=data[i].a2;
+        a[2]+=data[i].a3;
+        a[3]+=data[i].a4;
+        a[4]+=data[i].a5;
+        a[5]+=data[i].a6;
+        a[6]+=data[i].a7;
+        a[7]+=data[i].a8;
     }
-    a1 = a1 / l;
+    /*a1 = a1 / l;
     a2 = a2 / l;
     a3 = a3 / l;
     a4 = a4 / l;
     a5 = a5 / l;
     a6 = a6 / l;
     a7 = a7 / l;
-    a8 = a8 / l;
-    var yValues = [a1, a2, a3, a4, a5, a6, a7, a8];
-    var barColors = "blue";
+    a8 = a8 / l;*/
+    a[0] = a[0] / l;
+    a[1] = a[1] / l;
+    a[2] = a[2] / l;
+    a[3] = a[3] / l;
+    a[4] = a[4] / l;
+    a[5] = a[5] / l;
+    a[6] = a[6] / l;
+    a[7] = a[7] / l
+    var yValues = [a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]];
+    var barColors = "red";
 
     if (myChart != null) myChart.destroy();
 

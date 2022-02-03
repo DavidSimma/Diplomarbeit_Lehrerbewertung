@@ -6,20 +6,29 @@
 
 <h1 style="position: relative; top: 100px; text-align: center">Neues Feedback</h1>
 
-<div style="position: relative; top: 180px; text-align: center">
+<div style="position: relative; top: 120px; min-height: 350px; text-align: center">
     <form asp-controller="formular" asp-action="feedback_" method="post">
-        <lable asp-for="teacherId">FormularID</label></br>
-        <input asp-for="teacherId" type="text" />
-        <span asp-validation-for="teacherId" class="text-danger" style="font-size: 85%"></span></br>
-        <p><b>Pflichtfeld</b></p><br />
-        <lable asp-for="teacherKey">Schlüssel</label></br>
-        <input asp-for="teacherKey" type="text" />
-        <span asp-validation-for="teacherKey" class="text-danger" style="font-size: 85%"></span></br>
-        <p><b>Pflichtfeld</b></p><br />
-        <br />
-        <div style="position: relative; top: 70px; text-align: center">
+        <fieldset style="border: outset">
+            <div style="position: relative; top: 70px; min-height: 110px; text-align: center">
+            </div>
+            <!--<lable asp-for="teacherId">FormularID</label></br>-->
+            <input asp-for="teacherId" type="text" placeholder="FormularID angeben" />
+            <span asp-validation-for="teacherId" class="text-danger" style="font-size: 85%"></span></br>
+            <p><b>Pflichtfeld</b></p><br />
+            <!--<lable asp-for="teacherKey">Schlüssel</label></br>-->
+            <input asp-for="teacherKey" type="text" placeholder="Schlüssel wählen" />
+            <span asp-validation-for="teacherKey" class="text-danger" style="font-size: 85%"></span></br>
+            <p><b>Pflichtfeld</b></p><br />
+            <br />
+            <br />
+            <br />
             <input type="submit" value="erstellen" />
             <input type="reset" value="abbrechen" />
-        </div>
+            <div style="position: relative; top: 70px; min-height: 110px; text-align: center">
+            </div>
+        </fieldset>
     </form>
+</div>
+<div style="position: relative; top:70px; min-height: 100px">
+
 </div>
