@@ -7,57 +7,57 @@
 <h1 style="position: relative; top: 100px; text-align: center">Neues Formular erstellen</h1>
 
 <div style="position: relative; top: 120px; min-height: 980px; text-align: center">
-    <form asp-controller="formular" asp-action="formularNeu" method="post">
+    <form class="form-horizontal" asp-controller="formular" asp-action="formularNeu" method="post">
         <fieldset style="border: outset">
             <div style="position: relative; top: 70px; min-height: 50px; text-align: center">
-            </div>
+            </div>  
             <!--<lable asp-for="teacherId">FormularID</label></br>-->
-            <input asp-for="teacherId" type="text" placeholder="FormularID formulieren" />
+            <input class="form-control-lg" asp-for="teacherId" type="text" placeholder="FormularID formulieren" />
             <span asp-validation-for="teacherId" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="heading">Überschrift</label></br>-->
-            <input asp-for="heading" type="text" placeholder="Überschrift formulieren" />
+            <input class="form-control-lg" asp-for="heading" type="text" placeholder="Überschrift formulieren" />
             <span asp-validation-for="heading" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q1">Frage1</label></br>-->
-            <input asp-for="q1" type="text" placeholder="Frage 1 formulieren" />
+            <input class="form-control-lg" asp-for="q1" type="text" placeholder="Frage 1 formulieren" />
             <span asp-validation-for="q1" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q2">Frage2</label></br>-->
-            <input asp-for="q2" type="text" placeholder="Frage 2 formulieren" />
+            <input class="form-control-lg" asp-for="q2" type="text" placeholder="Frage 2 formulieren" />
             <span asp-validation-for="q2" class="text-danger" style="font-size: 85%"></span></br>
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q3">Frage3</label></br>-->
-            <input asp-for="q3" type="text" placeholder="Frage 3 formulieren" />
+            <input class="form-control-lg" asp-for="q3" type="text" placeholder="Frage 3 formulieren" />
             <span asp-validation-for="q3" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q4">Frage4</label></br>-->
-            <input asp-for="q4" type="text" placeholder="Frage 4 formulieren" />
+            <input class="form-control-lg" asp-for="q4" type="text" placeholder="Frage 4 formulieren" />
             <span asp-validation-for="q4" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q5">Frage5</label></br>-->
-            <input asp-for="q5" type="text" placeholder="Frage 5 formulieren" />
+            <input class="form-control-lg" asp-for="q5" type="text" placeholder="Frage 5 formulieren" />
             <span asp-validation-for="q5" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q6">Frage6</label></br>-->
-            <input asp-for="q6" type="text" placeholder="Frage 6 formulieren" />
+            <input class="form-control-lg" asp-for="q6" type="text" placeholder="Frage 6 formulieren" />
             <span asp-validation-for="q6" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q7">Frage7</label></br>-->
-            <input asp-for="q7" type="text" placeholder="Frage 7 formulieren" />
+            <input class="form-control-lg" asp-for="q7" type="text" placeholder="Frage 7 formulieren" />
             <span asp-validation-for="q7" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="q8">Frage8</lable></br>-->
-            <input asp-for="q8" type="text" placeholder="Frage 8 formulieren" />
+            <input class="form-control-lg" asp-for="q8" type="text" placeholder="Frage 8 formulieren" />
             <span asp-validation-for="q8" class="text-danger" style="font-size: 85%"></span><br />
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="annotion">Anmerkung</label></br>-->
-            <input asp-for="annotion" type="text" placeholder="Anmerkung formulieren" />
+            <input class="form-control-lg" asp-for="annotion" type="text" placeholder="Anmerkung formulieren" />
             <span asp-validation-for="annotion" class="text-danger" style="font-size: 85%"></span><br />
             <br />
             <br />
-            <input type="submit" value="erstellen" />
-            <input type="reset" value="abbrechen" />
+            <input class="form-control-lg" type="submit" value="erstellen" />
+            <input class="form-control-lg" type="reset" value="abbrechen" />
             <div style="position: relative; top: 70px; min-height: 60px; text-align: center">
             </div>
         </fieldset>

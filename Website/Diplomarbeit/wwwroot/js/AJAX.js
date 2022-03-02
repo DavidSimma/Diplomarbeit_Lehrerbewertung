@@ -159,15 +159,8 @@
 var myChart
 
 function createChart(data) {
-    var xValues = ["Frage1", "Frage2", "Frage3", "Frage4", "Frage5", "Frage6", "Frage7", "Frage8"];
-    /*var a1 = 0;
-    var a2 = 0;
-    var a3 = 0;
-    var a4 = 0;
-    var a5 = 0;
-    var a6 = 0;
-    var a7 = 0;
-    var a8 = 0;*/
+    var xValues = ["Frage1", "Frage2", "Frage3",
+        "Frage4", "Frage5", "Frage6", "Frage7", "Frage8"];
     var a = [0, 0, 0, 0, 0, 0, 0, 0]
     var l = data.length;
     for (let i = 0; i < l; i++) {
@@ -180,14 +173,6 @@ function createChart(data) {
         a[6]+=data[i].a7;
         a[7]+=data[i].a8;
     }
-    /*a1 = a1 / l;
-    a2 = a2 / l;
-    a3 = a3 / l;
-    a4 = a4 / l;
-    a5 = a5 / l;
-    a6 = a6 / l;
-    a7 = a7 / l;
-    a8 = a8 / l;*/
     a[0] = a[0] / l;
     a[1] = a[1] / l;
     a[2] = a[2] / l;
@@ -452,7 +437,7 @@ let i;
 function createSelectFormulare(formular) {
     let s = `<select>
         <option>FormularID wählen</option>`;
-    for (let i = 5; i < formular.length; i++) {
+    for (let i = 3; i < formular.length; i++) {
         s += `<option>${formular[i].teacherId}</option>`;
     }
     s += `</select>`;
@@ -583,7 +568,7 @@ function createFormular(formular) {
 
 function createFormular2() {
     i = i + 1;
-    if (i <= 5) {
+    if (i <= 3) {
         let s = `<div class="container">
             <table class="table table-striped table-bordered table-hover table-condensed">
                 <thead>
@@ -642,7 +627,7 @@ function createFormular2() {
         </div>`;
         return s;
     } else {
-        i = 6;
+        i = 4;
         let d = `<h5 style="position: relative; top: 133px">alle verfügbaren Standardformulare</h5><br />
         <h5 style="position: relative; top: 133px">Individuelle Formulare müssen mit ID gesucht werden!</h5>`;
         return d;

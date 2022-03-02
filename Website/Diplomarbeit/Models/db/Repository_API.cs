@@ -12,11 +12,12 @@ namespace Diplomarbeit.Models.db
     {
 
         public static HttpClient _client = new HttpClient();
-        private static string server = "localhost";
+        private static string server = "10.10.208.224";
+        private static string port = "5000";
 
-        public async Task<Formular> GetFormularByID(string id)
+        public async Task<Formular> GetFormularByID(string id)              //Geht
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/fragen/" + id);
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":"+ port + "/api/fragen/" + id);
 
             if (response.IsSuccessStatusCode)
             {
@@ -31,13 +32,14 @@ namespace Diplomarbeit.Models.db
             }
         }
 
-        public async Task<List<Formular>> GetAllFormular()
+        public async Task<List<Formular>> GetAllFormular()          //Geht
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/fragen");
+            HttpResponseMessage response = await _client.GetAsync("http://" + server +":"+ port +"/api/fragen");
 
             if (response.IsSuccessStatusCode)
             {
                 string responseJSON = await response.Content.ReadAsStringAsync();
+                responseJSON = "["+ responseJSON +"]";
 
                 return JsonConvert.DeserializeObject<List<Formular>>(responseJSON);
             }
@@ -47,13 +49,32 @@ namespace Diplomarbeit.Models.db
             }
         }
 
-        public async Task<List<Feedback>> GetAllFeedback()
+        public async Task<bool> SendFilledData(Formular formular)       //geht
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/feedback");
+            var json = JsonConvert.SerializeObject(formular);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var url = "http://" + server + ":" + port + "/api/fragen/post";
+
+            var response2 = await _client.PostAsync(url, data);
+            if (response2.Content.ReadAsStringAsync().Result.Equals("1"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<List<Feedback>> GetAllFeedback()          // Geht
+        {
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":"+ port +"/api/feedback");
 
             if (response.IsSuccessStatusCode)
             {
                 string responseJSON = await response.Content.ReadAsStringAsync();
+                responseJSON = "[" + responseJSON + "]";
 
                 return JsonConvert.DeserializeObject<List<Feedback>>(responseJSON);
             }
@@ -65,11 +86,12 @@ namespace Diplomarbeit.Models.db
 
         public async Task<List<Ergebnis>> GetErgebnisByKey(string key)
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/antworten/" + key);
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":"+ port + "/api/antworten/" + key);
 
             if (response.IsSuccessStatusCode)
             {
                 string responseJSON = await response.Content.ReadAsStringAsync();
+                responseJSON = "[" + responseJSON + "]";
 
                 return JsonConvert.DeserializeObject<List<Ergebnis>>(responseJSON);
             }
@@ -79,13 +101,14 @@ namespace Diplomarbeit.Models.db
             }
         }
 
-        public async Task<List<Ergebnis>> GetKey()
+        /*public async Task<List<Ergebnis>> GetKey()
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/antworten/key");
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":"+ port + "/api/antworten/key");
 
             if (response.IsSuccessStatusCode)
             {
                 string responseJSON = await response.Content.ReadAsStringAsync();
+                responseJSON = "[" + responseJSON + "]";
 
                 return JsonConvert.DeserializeObject<List<Ergebnis>>(responseJSON);
             }
@@ -93,35 +116,17 @@ namespace Diplomarbeit.Models.db
             {
                 return null;
             }
-        }
+        }*/
 
-        public async Task<bool> SendFilledData(Formular formular)
-        {
-            var json = JsonConvert.SerializeObject(formular);
-            var data = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var url = "http://" + server + ":56928/api/fragen/post";
-
-            var response2 = await _client.PostAsync(url, data);
-            if (response2.Content.ReadAsStringAsync().Result.Equals("true"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public async Task<bool> SendFilledDataFeedback(Feedback feedback)
+        public async Task<bool> SendFilledDataFeedback(Feedback feedback)           //geht
         {
             var json = JsonConvert.SerializeObject(feedback);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var url = "http://" + server + ":56928/api/feedback/post";
+            var url = "http://" + server + ":"+ port + "/api/feedback/post";
 
             var response2 = await _client.PostAsync(url, data);
-            if (response2.Content.ReadAsStringAsync().Result.Equals("true"))
+            if (response2.Content.ReadAsStringAsync().Result.Equals("1"))
             {
                 return true;
             }

@@ -152,7 +152,7 @@ namespace Diplomarbeit.Controllers
         {
             try
             {
-                List<Ergebnis> distinct = await rep.GetKey();
+                List<Feedback> distinct = await rep.GetAllFeedback();
                 if (distinct != null)
                 {
                     return Json(distinct);
@@ -166,6 +166,22 @@ namespace Diplomarbeit.Controllers
             {
                 return Json("DbError");
             }
+            /*try
+            {
+                List<Ergebnis> distinct = await rep.GetKey();
+                if (distinct != null)
+                {
+                    return Json(distinct);
+                }
+                else
+                {
+                    return Json("NoFormular");
+                }
+            }
+            catch (Exception)
+            {
+                return Json("DbError");
+            }*/
         }
 
         public async Task<JsonResult> GetErgebnisByKey(string key)
@@ -211,35 +227,35 @@ namespace Diplomarbeit.Controllers
             {
                 ModelState.AddModelError(nameof(Formular.teacherId), "FormularID muss angegeben werden!");
             }
-            if (a.q1.Length < 1)
+            if (a.q1.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q1), "Frage muss formuliert werden!");
             }
-            if (a.q2.Length < 1)
+            if (a.q2.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q2), "Frage muss formuliert werden!");
             }
-            if (a.q3.Length < 1)
+            if (a.q3.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q3), "Frage muss formuliert werden!");
             }
-            if (a.q4.Length < 1)
+            if (a.q4.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q4), "Frage muss formuliert werden!");
             }
-            if (a.q5.Length < 1)
+            if (a.q5.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q5), "Frage muss formuliert werden!");
             }
-            if (a.q6.Length < 1)
+            if (a.q6.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q6), "Frage muss formuliert werden!");
             }
-            if (a.q7.Length < 1)
+            if (a.q7.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q7), "Frage muss formuliert werden!");
             }
-            if (a.q8.Length < 1)
+            if (a.q8.Length < 10)
             {
                 ModelState.AddModelError(nameof(Formular.q8), "Frage muss formuliert werden!");
             }

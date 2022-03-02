@@ -5,53 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Diplomarbeit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light
+             bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a href="#" class="navbar-brand"><img src="~/logo.png" height="40"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <a class="navbar-brand"><img src="~/logo.png" height="40"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                        data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse mx-auto" 
+                     style="width:100%">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Willkommen</a>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                            <span class="mb-0 h5 text-dark">Willkommen</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">Impressum</a>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" 
+                               asp-action="AboutUs"><span class="mb-0 h5 text-dark">Impressum</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Datenschutz</a>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" 
+                               asp-action="Privacy"><span class="mb-0 h5 text-dark">Datenschutz</span></a>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropbtn">Formular</a>
-                            <div class="dropdown-content">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Formular" asp-action="FormularNeu">Neues Formular</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Formular" asp-action="Standardformular">Standard Formulare</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Formular" asp-action="IndividuelleFormulare">Individuelle Formulare</a>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link text-dark dropdown-toggle-split" href="#" 
+                               id="navbarDropdown" role="button" data-toggle="dropdown">
+                                <span class="mb-0 h5 text-dark">Formular</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Formular" 
+                                   asp-action="FormularNeu">Neues Formular</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-controller="Formular" 
+                                   asp-action="Standardformular">Standard Formulare</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-controller="Formular" 
+                                   asp-action="IndividuelleFormulare">Individuelle Formulare</a>
                             </div>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropbtn">Feedback</a>
-                            <div class="dropdown-content">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Formular" asp-action="Feedback_">Neues Feedback</a>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link text-dark dropdown-toggle-split" href="#" 
+                               id="navbarDropdown" role="button" data-toggle="dropdown">
+                                <span class="mb-0 h5 text-dark">Feedback</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Formular" 
+                                   asp-action="Feedback_">Neues Feedback</a>
                             </div>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropbtn">Ergebnis</a>
-                            <div class="dropdown-content">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Formular" asp-action="Ergebnis_Formular">Ergebnis_Formulare</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Formular" asp-action="Ergebnis_Auswertung">Diagrammauswertung</a>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link text-dark dropdown-toggle-split" href="#" 
+                               id="navbarDropdown" role="button" data-toggle="dropdown">
+                                <span class="mb-0 h5 text-dark">Ergebnis</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Formular" 
+                                   asp-action="Ergebnis_Formular">Ergebnis_Formulare</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-controller="Formular" 
+                                   asp-action="Ergebnis_Auswertung">Diagrammauswertung</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Download">Download</a>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="App" 
+                               asp-action="Download"><span class="mb-0 h5 text-dark">Download</span></a>
                         </li>
                     </ul>
                 </div>
@@ -63,10 +87,10 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Feedback für Lehrpersonen - <a asp-area="" asp-controller="Home" asp-action="Privacy">Datenschutz</a>
+            &copy; 2021/22 - Feedback für Lehrpersonen - 
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Datenschutz</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

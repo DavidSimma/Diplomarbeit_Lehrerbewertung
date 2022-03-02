@@ -12,7 +12,7 @@ namespace Diplomarbeit.Models.db
         Task<List<Formular>> GetAllFormular();
         Task<List<Feedback>> GetAllFeedback();
         Task<List<Ergebnis>> GetErgebnisByKey(string key);
-        Task<List<Ergebnis>> GetKey();
+        //Task<List<Ergebnis>> GetKey();
         Task<bool> SendFilledData(Formular formular);
         Task<bool> SendFilledDataFeedback(Feedback feedback);
 

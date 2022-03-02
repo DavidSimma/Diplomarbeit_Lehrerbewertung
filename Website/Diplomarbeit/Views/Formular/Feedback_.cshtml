@@ -9,22 +9,22 @@
 <div style="position: relative; top: 120px; min-height: 350px; text-align: center">
     <form asp-controller="formular" asp-action="feedback_" method="post">
         <fieldset style="border: outset">
-            <div style="position: relative; top: 70px; min-height: 110px; text-align: center">
+            <div style="position: relative; top: 10px; min-height: 90px; text-align: center">
             </div>
             <!--<lable asp-for="teacherId">FormularID</label></br>-->
-            <input asp-for="teacherId" type="text" placeholder="FormularID angeben" />
+            <input class="form-control-lg" asp-for="teacherId" type="text" placeholder="FormularID angeben" />
             <span asp-validation-for="teacherId" class="text-danger" style="font-size: 85%"></span></br>
             <p><b>Pflichtfeld</b></p><br />
             <!--<lable asp-for="teacherKey">Schlüssel</label></br>-->
-            <input asp-for="teacherKey" type="text" placeholder="Schlüssel wählen" />
+            <input class="form-control-lg" asp-for="teacherKey" type="text" placeholder="Schlüssel wählen" />
             <span asp-validation-for="teacherKey" class="text-danger" style="font-size: 85%"></span></br>
             <p><b>Pflichtfeld</b></p><br />
             <br />
             <br />
             <br />
-            <input type="submit" value="erstellen" />
-            <input type="reset" value="abbrechen" />
-            <div style="position: relative; top: 70px; min-height: 110px; text-align: center">
+            <input class="form-control-lg" type="submit" value="erstellen" />
+            <input class="form-control-lg" type="reset" value="abbrechen" />
+            <div style="position: relative; top: 70px; min-height: 70px; text-align: center">
             </div>
         </fieldset>
     </form>
