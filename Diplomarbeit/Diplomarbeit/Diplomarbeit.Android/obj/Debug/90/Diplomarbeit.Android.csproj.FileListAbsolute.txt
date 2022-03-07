@@ -503,3 +503,4 @@ C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit.Andro
 C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.dll
 C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit.Android\obj\Debug\90\android\assets\System.Threading.dll
 C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit.Android\obj\Debug\90\Diplomarbeit.Android.csproj.CopyComplete

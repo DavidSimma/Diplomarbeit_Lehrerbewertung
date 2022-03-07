@@ -6,16 +6,16 @@ namespace Diplomarbeit.models
 {
     class EmptyForm : App
     {
-        private static List<string> _questions = new List<string>();
+        public static List<string> Questions = new List<string>();
         public static string Key { get; set; }
         public static string Heading { get; set; }
-        public static List<string> getQuestions ()
-        { 
-            return _questions; 
-        }
+        //public static List<string> getQuestions ()
+        //{ 
+        //    return _questions; 
+        //}
         public static void addQuestion(string q)
         {
-            _questions.Add(q);
+            Questions.Add(q);
         }
         public static string Annotation { get; set; }
     }

@@ -6,8 +6,8 @@ namespace Diplomarbeit.models
 {
     class Feedback
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string teacherId { get; set; }
-        public string teacherKey { get; set; }
+        public string TeacherKey { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Diplomarbeit.mainPages
         public Kommentar()
         {
             InitializeComponent();
+            ueberschrift.Text = EmptyForm.Heading;
         }
 
         private void zurueck_Clicked(object sender, EventArgs e)

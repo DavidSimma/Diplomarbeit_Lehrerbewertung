@@ -17,3 +17,6 @@ C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\obj\D
 C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\obj\Debug\netstandard2.0\mainPages\Kommentar.xaml.g.cs
 C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\obj\Debug\netstandard2.0\mainPages\TeacherKey.xaml.g.cs
 C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\obj\Debug\netstandard2.0\mainPages\Checkout.xaml.g.cs
+C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\simma\Desktop\Diplomarbeit\Diplomarbeit\Diplomarbeit\Diplomarbeit\bin\Debug\netstandard2.0\Mono.Android.xml

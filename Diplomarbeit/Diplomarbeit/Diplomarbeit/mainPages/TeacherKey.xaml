@@ -28,7 +28,8 @@
                 Text="Falscher Schlüssel! Bitte versuchen Sie es erneut"
                 TextColor="Red"
                 FontSize="Micro"
-                HorizontalTextAlignment="Center"/>
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Start"/>
 
             <StackLayout Orientation="Horizontal"
                          VerticalOptions="EndAndExpand">

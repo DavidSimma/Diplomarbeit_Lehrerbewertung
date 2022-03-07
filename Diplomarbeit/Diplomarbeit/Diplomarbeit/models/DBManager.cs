@@ -11,21 +11,13 @@ namespace Diplomarbeit.models
     static class DBManager
     {
         private static HttpClient _client = new HttpClient();
-        private static string server = "localhost";
+        private static string server = "10.10.209.34";
+        private static string port = "5000";
         
-        public static async Task<bool> keyExists(string key)
-        {
-            HttpResponseMessage response = await _client.GetAsync("http://"+server+":56928/api/fragen/" + key);
-            if (response.IsSuccessStatusCode)
-            {
-                return true;
-            }
-            return false;
-        }
 
         public static async Task<API_Request> getEmptyValuation(string key)
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/fragen/" + key);
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":5000/api/fragen/" + key);
 
             if (response.IsSuccessStatusCode)
             {
@@ -44,24 +36,24 @@ namespace Diplomarbeit.models
             var json = JsonConvert.SerializeObject(a);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var url = "http://" + server + ":56928/api/antworten/post";
+            var url = "http://" + server + ":" + port + "/api/antworten/post";
 
             var response = await _client.PostAsync(url, data);
             if (response.IsSuccessStatusCode) return true;
             else return false;
         }
 
-        public static async Task<bool> feedbackExists(string formularID, string TeacherKey)
+        public static async Task<bool> feedbackExists(string teacherID, string TeacherKey)
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":56928/api/feedback");
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":" + port + "/api/feedback");
             if (response.IsSuccessStatusCode)
             {
                 string responseJSON = await response.Content.ReadAsStringAsync();
-
+                responseJSON = "[" + responseJSON + "]";
                 List<Feedback> fed = JsonConvert.DeserializeObject<List<Feedback>>(responseJSON);
                 foreach (Feedback f in fed)
                 {
-                    if (f.teacherId == formularID && f.teacherKey == TeacherKey)
+                    if (f.teacherId == teacherID && f.TeacherKey == TeacherKey)
                     {
                         return true;
                     }

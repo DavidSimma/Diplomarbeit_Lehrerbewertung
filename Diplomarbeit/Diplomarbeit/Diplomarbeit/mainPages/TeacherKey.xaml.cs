@@ -52,19 +52,23 @@ namespace Diplomarbeit.mainPages
             if (!AllowTap) return; AllowTap = false;
             absenden.IsEnabled = true;
             ResumeTap();
-            bool temp = false;
-            //temp = await DBManager.feedbackExists(Valuation.Key, teacherKey.Text);
-            if(temp || true)
+            try
             {
-                safeTeacherKeyInRAM();
-                Application.Current.MainPage = new Checkout();
+                bool temp = await DBManager.feedbackExists(Valuation.Key, teacherKey.Text);
+                if (temp)
+                {
+                    safeTeacherKeyInRAM();
+                    Application.Current.MainPage = new Checkout();
+                }
+                else
+                {
+                    wrongKey.IsVisible = true;
+                }
             }
-            else
+            catch(Exception)
             {
                 wrongKey.IsVisible = true;
             }
-
-            
         }
 
 

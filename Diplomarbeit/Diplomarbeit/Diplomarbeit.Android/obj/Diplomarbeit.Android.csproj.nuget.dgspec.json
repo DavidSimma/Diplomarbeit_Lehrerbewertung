@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj": {}
+    "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj": {
+    "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj",
+        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj",
         "projectName": "Diplomarbeit.Android",
-        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj",
+        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\Diplomarbeit.Android.csproj",
         "packagesPath": "C:\\Users\\simma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\obj\\",
+        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
-                "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj"
+              "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
+                "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj"
               }
             }
           }
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
+    "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
+        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
         "projectName": "Diplomarbeit",
-        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
+        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
         "packagesPath": "C:\\Users\\simma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\obj\\",
+        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

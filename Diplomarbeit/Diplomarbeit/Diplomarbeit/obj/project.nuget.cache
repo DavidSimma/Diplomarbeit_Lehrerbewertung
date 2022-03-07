@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zFt7sliSww4FUVECK5g+J9W/OJqS8KkWIthN8wIsVGIrfKgGDci0QQtA57beRDO7CmgSS7QhZvcoSILAMSVliA==",
+  "dgSpecHash": "vgSK6CYUadNMcXoUFCqyVEg/wwFSR39KSxUM54udtzFQBfuHsweYDy16qi4sk1Thuq/aJYf/BrXwJ+OldklBkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
+  "projectFilePath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simma\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\simma\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

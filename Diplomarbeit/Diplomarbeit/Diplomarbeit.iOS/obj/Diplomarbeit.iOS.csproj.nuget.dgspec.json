@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj": {}
+    "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj": {
+    "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj",
         "projectName": "Diplomarbeit.iOS",
-        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj",
+        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\Diplomarbeit.iOS.csproj",
         "packagesPath": "C:\\Users\\simma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\obj\\",
+        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
-                "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj"
+              "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
+                "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
+    "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
+        "projectUniqueName": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
         "projectName": "Diplomarbeit",
-        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
+        "projectPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit.csproj",
         "packagesPath": "C:\\Users\\simma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit_Repo zusammen\\Diplomarbeit_Lehrerbewertung\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\obj\\",
+        "outputPath": "C:\\Users\\simma\\Desktop\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\Diplomarbeit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

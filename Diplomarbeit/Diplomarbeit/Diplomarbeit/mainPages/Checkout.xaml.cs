@@ -17,11 +17,8 @@ namespace Diplomarbeit.mainPages
         public Checkout()
         {
             InitializeComponent();
-
-            debugData();
-
-            //getAPIStatus();
-            if (api_status || true)
+            getAPIStatus();
+            if (api_status)
             {
                 status.Text = "Die Daten konnten erfolgreich abgesendet werden!";
             }
@@ -46,8 +43,7 @@ namespace Diplomarbeit.mainPages
         private API_Template convertData()
         {
             API_Template temp = new API_Template();
-            temp.ID = Valuation.Key;
-            temp.Heading = Valuation.Heading;
+            temp.teacherId = Valuation.Key;
             temp.a1 = Valuation.getAnswers()[0];
             temp.a2 = Valuation.getAnswers()[1];
             temp.a3 = Valuation.getAnswers()[2];
@@ -56,21 +52,9 @@ namespace Diplomarbeit.mainPages
             temp.a6 = Valuation.getAnswers()[5];
             temp.a7 = Valuation.getAnswers()[6];
             temp.a8 = Valuation.getAnswers()[7];
-            temp.TeacherKey = Valuation.TeacherKey;
+            temp.anmerkungAnswer = Valuation.Annotation;
+            temp.teacherKey = Valuation.TeacherKey;
             return temp;
-        }
-
-        private void debugData()
-        {
-            System.Diagnostics.Debug.WriteLine(Valuation.Key);
-            System.Diagnostics.Debug.WriteLine(Valuation.Heading);
-            foreach(int i in Valuation.getAnswers())
-            {
-                System.Diagnostics.Debug.WriteLine(i);
-            }
-            
-            System.Diagnostics.Debug.WriteLine(Valuation.Annotation);
-            System.Diagnostics.Debug.WriteLine(Valuation.TeacherKey);
         }
 
         private static bool AllowTap = true;

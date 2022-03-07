@@ -15,7 +15,8 @@
                 BackgroundColor="Orange"/>
             <Label
                 x:Name="status"
-                Text=""/>
+                Text=""
+                HorizontalOptions="Center"/>
             <Button
                 x:Name="backToStart"
                 Text="Abschließen"

@@ -6,7 +6,7 @@ namespace Diplomarbeit.models
 {
     class API_Request
     {
-        public string ID { get; set; }
+        public string teacherId { get; set; }
         public string Heading { get; set; }
         public string q1 { get; set; }
         public string q2 { get; set; }
@@ -16,6 +16,6 @@ namespace Diplomarbeit.models
         public string q6 { get; set; }
         public string q7 { get; set; }
         public string q8 { get; set; }
-        public string Annotation { get; set; }
+        public string annotion { get; set; }
     }
 }

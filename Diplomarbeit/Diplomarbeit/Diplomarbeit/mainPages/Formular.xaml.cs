@@ -28,7 +28,7 @@ namespace Diplomarbeit.mainPages
         private void displayTexts()
         {
             ueberschrift.Text = EmptyForm.Heading;
-            frage.Text = EmptyForm.getQuestions()[Application.Current.MainPage.Navigation.NavigationStack.Count];
+            frage.Text = EmptyForm.Questions[Application.Current.MainPage.Navigation.NavigationStack.Count];
         }
 
         private void displaySliderValue(Slider auswahl, Label text)
