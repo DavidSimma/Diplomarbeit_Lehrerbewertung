@@ -9,10 +9,6 @@ namespace Diplomarbeit.models
         public static List<string> Questions = new List<string>();
         public static string Key { get; set; }
         public static string Heading { get; set; }
-        //public static List<string> getQuestions ()
-        //{ 
-        //    return _questions; 
-        //}
         public static void addQuestion(string q)
         {
             Questions.Add(q);

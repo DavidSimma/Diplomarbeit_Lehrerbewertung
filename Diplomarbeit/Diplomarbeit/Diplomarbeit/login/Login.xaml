@@ -22,7 +22,8 @@
                 x:Name="key"
                 Placeholder="Schlüssel eingeben"
                 VerticalOptions="Center"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Text=""/>
             <Label
                 x:Name="wrongKey"
                 IsVisible="false"

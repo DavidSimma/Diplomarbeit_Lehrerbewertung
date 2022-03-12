@@ -17,26 +17,28 @@ namespace Diplomarbeit.mainPages
         public Checkout()
         {
             InitializeComponent();
-            getAPIStatus();
-            if (api_status)
+            checkForAPIStatus();
+        }
+
+        private async void checkForAPIStatus()
+        {
+            try
             {
-                status.Text = "Die Daten konnten erfolgreich abgesendet werden!";
+                bool result = await DBManager.sendFilledValuation(convertData());
+                
+                if (result)
+                {
+                    status.Text = "Die Daten konnten erfolgreich abgesendet werden!";
+                }
+                else
+                {
+                    status.Text = "Es gab ein Proplem beim Übertragen der Daten, probieren Sie es bitte erneut!";
+                }
             }
-            else
+            catch (Exception)
             {
                 status.Text = "Es gab ein Proplem beim Übertragen der Daten, probieren Sie es bitte erneut!";
             }
-        }
-        private bool api_status = false;
-
-        private async void getAPIStatus()
-        {
-            
-            if(await DBManager.sendFilledValuation(convertData()))
-            {
-                api_status = true;
-            }
-            api_status = false;
             
         }
 

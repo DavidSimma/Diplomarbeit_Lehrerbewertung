@@ -11,13 +11,15 @@ namespace Diplomarbeit.models
     static class DBManager
     {
         private static HttpClient _client = new HttpClient();
-        private static string server = "10.10.209.34";
-        private static string port = "5000";
+
+        private static string server = "91.114.235.31";
+        private static string port = "80";
         
 
         public static async Task<API_Request> getEmptyValuation(string key)
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":5000/api/fragen/" + key);
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":"+port+
+                "/api/fragen/" + key);
 
             if (response.IsSuccessStatusCode)
             {
@@ -39,13 +41,21 @@ namespace Diplomarbeit.models
             var url = "http://" + server + ":" + port + "/api/antworten/post";
 
             var response = await _client.PostAsync(url, data);
-            if (response.IsSuccessStatusCode) return true;
-            else return false;
+            if (response.Content.ReadAsStringAsync().Result.Equals("1"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public static async Task<bool> feedbackExists(string teacherID, string TeacherKey)
         {
-            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":" + port + "/api/feedback");
+            HttpResponseMessage response = await _client.GetAsync("http://" + server + ":" + port + 
+                "/api/feedback");
             if (response.IsSuccessStatusCode)
             {
                 string responseJSON = await response.Content.ReadAsStringAsync();

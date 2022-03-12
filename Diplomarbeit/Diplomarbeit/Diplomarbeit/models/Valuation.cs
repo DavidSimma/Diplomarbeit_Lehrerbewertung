@@ -7,7 +7,6 @@ namespace Diplomarbeit.models
     {
         private static List<int> _answers = new List<int>();
         public static string Key { get; set; }
-        public static string Heading { get; set; }
         public static List<int> getAnswers()
         {
             return _answers;

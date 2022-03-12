@@ -80,7 +80,6 @@ namespace Diplomarbeit.mainPages
         private void safeDataInRAMOnce()
         {
             Valuation.Key = EmptyForm.Key;
-            Valuation.Heading = EmptyForm.Heading;
         }
     }
 }

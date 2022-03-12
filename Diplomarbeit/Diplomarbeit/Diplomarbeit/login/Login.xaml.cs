@@ -23,7 +23,6 @@ namespace Diplomarbeit.login
         private async void submit_Clicked(Object sender, EventArgs e)
         {
             string input = key.Text.ToString();
-
             try
             {
                 API_Request temp = await DBManager.getEmptyValuation(input);
@@ -32,19 +31,11 @@ namespace Diplomarbeit.login
                     convertData(temp);
                     Application.Current.MainPage = new NavigationPage(new Formular());
                 }
-                else
-                {
-                    this.wrongKey.IsVisible = true;
-                }
-                
+                else{ this.wrongKey.IsVisible = true; }
             }
-            catch (Exception)
-            {
-                wrongKey.IsVisible = true;
-            }
-            
-
+            catch (Exception){ wrongKey.IsVisible = true; }
         }
+
         private void convertData(API_Request a)
         {
             EmptyForm.Questions.Clear();
@@ -60,6 +51,7 @@ namespace Diplomarbeit.login
             EmptyForm.addQuestion(a.q8);
             EmptyForm.Annotation = a.annotion;
         }
+
 
     }
 }
