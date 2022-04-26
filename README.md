@@ -18,7 +18,20 @@ Für die einwandfreie Ausführung des Servers werden folgende zusätzliche Progr
 
 Wenn der Server gestartet wird, sind am Anfang noch keine Aktionen sichtbar, da noch niemand auf die API zugegriffen hat. Das sieht man im folgenden Bild: 
 
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Backend/Manuel/Server%20Start.png" width="800">
+
 Mit einer GET-Abfrage werden Daten vom Server abgerufen und dem Client am Bildschirm in JSON-Form angezeigt. Was wieder dem darunter stehenden Bild entnehmen kann:
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Backend/Manuel/DB%20GET.png" width="800">
+
+Ebenso sieht man diese Aktion am Server:
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Backend/Manuel/Server%20GET.png" width="800">
 
 Mit POST-Abfragen werden Daten, in JSON-Form an den Server geschickt, welcher dies dann in die Datenbank speichert. Erkenntlich im folgenden Bild:
 
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Backend/Manuel/DB%20POST.png" width="800">
+
+Auch diese Aktion sieht man am Server:
+
+<img src="https://github.com/DavidSimma/Diplomarbeit_Lehrerbewertung/blob/Backend/Manuel/Server%20POST.png" width="800">
